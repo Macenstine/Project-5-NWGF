@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NorthwestG&amp;F</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="index.html">NorthwestG&amp;F</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="newsletter.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="calculator.html">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="message.html">Message</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="chart.html">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row" style="margin-top: 70px;">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Current Demand Status</h2>
+            <hr class="primary">
+            <p id="p2"></p>
+        </div>
+    </div>
+    <div class="chart" style="margin-top: 90px">
+
+        <script>
+            window.onload = function() {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    data: [{
+                        type: "doughnut",
+                        startAngle: 60,
+                        //innerRadius: 60,
+                        indexLabelFontSize: 17,
+                        indexLabel: "{label} - #percent%",
+                        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                        dataPoints: [{
+                                y: 67,
+                                label: "Hard Red"
+                            },
+                            {
+                                y: 28,
+                                label: "Hard White"
+                            },
+                            {
+                                y: 10,
+                                label: "Oats"
+                            },
+                            {
+                                y: 7,
+                                label: "Barley"
+                            },
+                            {
+                                y: 15,
+                                label: "Pastry Flour"
+                            },
+                            {
+                                y: 6,
+                                label: "Whole Wheat Flour"
+                            }
+                        ]
+                    }]
+                });
+                chart.render();
+
+            }
+
+        </script>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
+
+</html>
